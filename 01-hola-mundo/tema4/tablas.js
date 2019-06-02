@@ -1,4 +1,5 @@
 const fs = require('fs');
+const colors = require ('colors');
 
 
 let listar = (base, limite) => {
@@ -7,8 +8,13 @@ let listar = (base, limite) => {
         //ojo que despues de un reject continua con la ejecucion por eso pongo un return despues
         return;
     }
+
+    console.log(` ╔═════════════╗`.magenta);
+    console.log(` ║ tabla del ${base} ║`.magenta);
+    console.log(` ╚═════════════╝`.magenta);
+
     for (let i = 1; i <= limite; i++) {
-        console.log(`${base} *  ${i} = ${i*base}`);
+        console.log(`${base} *  ${i} = ${i*base}`.green);
     }
 
 }
@@ -28,7 +34,7 @@ let crearArchivo = (base, limite) => {
         let nombreArchivo = `tablas/tabla${base}.txt`;
         fs.writeFile(nombreArchivo, data, (err) => {
             if (err) {
-                reject('error');
+                reject(err);
                 //ojo que despues de un reject continua con la ejecucion por eso pongo un return despues
                 return;
             }
