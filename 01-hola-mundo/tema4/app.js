@@ -11,8 +11,8 @@ let command = argv._[0];
 switch (command) {
     case 'listar':
         listar(argv.base, argv.limite)
-
         break;
+
     case 'crear':
         crearArchivo(argv.base, argv.limite)
             .then((respuesta) => console.log(`Se ha creado el archivo ${String(respuesta).green}`))

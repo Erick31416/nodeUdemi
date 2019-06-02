@@ -1,7 +1,6 @@
 const fs = require('fs');
 const colors = require ('colors');
 
-
 let listar = (base, limite) => {
     if (!Number(base)) {
         reject('argumento no numerico, imposible proceder');
