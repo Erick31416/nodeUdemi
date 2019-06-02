@@ -31,7 +31,7 @@ let crearArchivo = (base, limite) => {
         for (let i = 1; i <= limite; i++) {
             data += (`${base} *  ${i} = ${i*base}\n`);
         }
-        let nombreArchivo = `tablas/tabla${base}.txt`;
+        let nombreArchivo = `./tablas/tabla${base}.txt`;
         fs.writeFile(nombreArchivo, data, (err) => {
             if (err) {
                 reject(err);

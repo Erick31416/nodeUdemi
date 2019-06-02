@@ -15,7 +15,8 @@ switch (command) {
         break;
     case 'crear':
         crearArchivo(argv.base, argv.limite)
-            .then((respuesta) => console.log(`Se ha creado el archivo ${respuesta}`))
+            .then((respuesta) => console.log(`Se ha creado el archivo ${String(respuesta).green}`))
+            //.then((respuesta) => console.log(`Se ha creado el archivo ${respuesta}`))
             //.then((respuesta) => console.log('Se ha creado el archivo '+ String(respuesta).green ))
             .catch((respufesta) => console.log(`Se ha detectado el siguente error : ${respufesta}`));
         break;
