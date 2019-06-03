@@ -1,0 +1,15 @@
+{
+  "name": "por_hacer",
+  "version": "16.6.2",
+  "description": "Parece que va a ser un programa de listas de tareas",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Erick31416",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.3.3",
+    "yargs": "^13.2.4"
+  }
+}
