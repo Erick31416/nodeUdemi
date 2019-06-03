@@ -1,13 +1,13 @@
 //const parametros = process.argv[2];
 opsCrear = {
-    descripicion: {
+    descripcion: {
         demand: true,
         alias: 'd',
         desc: 'Descripcion de la tarea por hacer'
     }
 }
 opsListar = {
-    descripicion: {
+    descripcion: {
         demand: true,
         alias: 'd',
         desc: 'Descripcion de la tarea por hacer'
