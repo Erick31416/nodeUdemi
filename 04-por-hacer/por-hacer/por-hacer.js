@@ -11,18 +11,35 @@ const guardarEnDB = (listadoPorHacer) => {
     );
 }
 
+const getlistado = () =>{
+    cargarDB();
+    return jsonListadoPorHacer;
+}
+
+const cargarDB = () => {
+    try {
+        jsonListadoPorHacer = require('../db/data.json');
+        
+    } catch (error) {
+        jsonListadoPorHacer = [];
+    }
+}
+
 const crear = (descripcion) => {
     
+    cargarDB();
+
     let porhacer = {
         descripcion,
         completado : false
     }
 
-    listadoPorHacer.push(porhacer);
-    guardarEnDB(listadoPorHacer);
-    return listadoPorHacer;
+    jsonListadoPorHacer.push(porhacer);
+    guardarEnDB(jsonListadoPorHacer);
+    return descripcion;
 }
 
 module.exports = {
-    crear
+    crear,
+    getlistado
 }
