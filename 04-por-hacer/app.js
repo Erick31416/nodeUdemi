@@ -18,7 +18,6 @@ switch (comando) {
     case 'listar':
         //listado = JSON.parse( porhacer.getlistado());
         listado = ( porhacer.getlistado());
-        console.log(listado);
 
         listado.forEach(element => {
             console.log('------------------------'.green);
@@ -31,7 +30,11 @@ switch (comando) {
         break;
 
     case 'actualizar':
-        console.log('Comando actualizar');
+        porhacer.actualizar(argv.descripcion,argv.completado)
+        break;
+    case 'borrar':
+        let borrar = porhacer.borrar(argv.descripcion);
+        console.log(borrar);
         break;
 
     default:
